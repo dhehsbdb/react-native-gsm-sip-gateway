@@ -35,4 +35,10 @@ allprojects {
         mavenCentral()
         maven { url 'https://jitpack.io' }
     }
+    configurations.all {
+        resolutionStrategy {
+            // Pin gson to a version that fixes CVE: Deserialization of Untrusted Data (< 2.8.9)
+            force 'com.google.code.gson:gson:2.10.1'
+        }
+    }
 }

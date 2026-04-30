@@ -12,3 +12,5 @@ const config = {
     }),
   },
 };
+
+module.exports = mergeConfig(defaultConfig, config);

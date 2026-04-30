@@ -90,6 +90,7 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation("com.facebook.react:react-android")
 
+    def hermesEnabled = findProperty("hermesEnabled") ?: "false"
     if (hermesEnabled.toBoolean()) {
         implementation("com.facebook.react:hermes-android")
     } else {
